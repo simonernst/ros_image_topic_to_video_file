@@ -12,6 +12,7 @@ class RosConverterVideo:
 		self.Bridge=CvBridge()
 		self.image_sub=rospy.Subscriber("/darknet_ros/detection_image", Image, self.callback, queue_size=100)
 		self.vwriter = cv2.VideoWriter("test.mp4",cv2.VideoWriter_fourcc(*'mp4v'),10,(640,480))
+		#Construction  cv2.VideoWriter(output_file, ..._fourcc(video_encoding),fps,video resolution
 
 	def callback(self,msg):
 		topic_img=self.Bridge.imgmsg_to_cv2(msg,"bgr8")
