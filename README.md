@@ -4,6 +4,7 @@
 
 ## Convert a compressedImage to a raw Image
 -> for packages that are not able to process compressed image
+Use of compressed image can improve the reliability of the image transport via wireless connection
 
 Dependencies : 
  Opencv
